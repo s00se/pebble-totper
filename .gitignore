@@ -20,3 +20,4 @@ Thumbs.db
 .waf*
 .lock-waf_linux_build
 .clangd
+_codeql_detected_source_root
