@@ -93,6 +93,7 @@ When PIN is enabled:
 - You'll need to enter your PIN when opening the app
 - PIN is a 3-digit code (000-999)
 - PIN is stored securely on the watch
+- **Important:** After 3 failed PIN attempts, all TOTP account data will be permanently wiped from the watch for security
 
 
 ## FAQ
@@ -107,7 +108,7 @@ A: No! After initial setup, TOTPer works completely standalone. All codes are ge
 A: TOTP requires accurate time. Make sure your watch is synced with your phone.
 
 **Q: How secure is this?**  
-A: TOTPer provides basic security that is suitable for everyday use. Secrets are stored unencrypted in watch storage (like most Pebble apps). The optional PIN uses a simple hash and can be brute-forced if someone has physical access to your watch. It's designed to prevent casual unauthorized access, not to protect against determined attackers with physical access.
+A: TOTPer provides basic security that is suitable for everyday use. Secrets are stored unencrypted in watch storage (like most Pebble apps). The optional PIN uses a simple hash and can be brute-forced if someone has physical access to your watch. However, the app includes a security measure: after 3 failed PIN attempts, all TOTP account data is automatically wiped from the device. This is designed to prevent casual unauthorized access and protect your data if your watch is lost or stolen.
 
 **Q: Which services are compatible?**  
 A: Any service supporting TOTP (most 2FA systems): Google, GitHub, Microsoft, Facebook, AWS, etc.
